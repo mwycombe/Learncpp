@@ -65,8 +65,7 @@ four:
 printwildcard: $(wildcard *.cpp)
 	dir /b $?
 
-linkmain: main.exe
-	makeobj
+main: main.o add.o
 	g++ main.o add.o -o main.exe
 	.\main.exe
 
